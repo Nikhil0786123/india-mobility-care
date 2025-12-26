@@ -45,50 +45,44 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-card shadow-medium"
-          : "bg-card/95 backdrop-blur-sm"
-      }`}
-    >
-      <div className="container-custom section-padding !py-3">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-border">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           {/* Logo + Brand Name */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3">
             <img 
               src={logo} 
               alt="P&O Robotics Artificial Limbs Solutions LLP" 
-              className="h-12 md:h-14 w-auto object-contain"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
             />
-            <div className="hidden sm:flex flex-col leading-tight">
-              <span className="font-outfit font-bold text-base md:text-lg text-primary tracking-tight">
+            <div className="flex flex-col leading-tight">
+              <span className="font-outfit font-bold text-sm sm:text-base md:text-lg text-primary">
                 P&O ROBOTICS
               </span>
-              <span className="font-outfit font-medium text-[10px] md:text-xs text-foreground/80 tracking-wide uppercase">
+              <span className="font-outfit font-medium text-[9px] sm:text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide">
                 Artificial Limbs Solutions LLP
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-5">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) =>
               link.submenu ? (
                 <DropdownMenu key={link.path}>
-                  <DropdownMenuTrigger className="flex items-center gap-1 font-medium text-sm transition-colors duration-200 hover:text-primary text-foreground outline-none">
+                  <DropdownMenuTrigger className="flex items-center gap-1 font-medium text-sm text-foreground hover:text-primary transition-colors outline-none">
                     {link.name}
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-56 bg-card border-border">
+                  <DropdownMenuContent align="start" className="w-56 bg-white border border-border shadow-lg">
                     {link.submenu.map((subItem) => (
                       <DropdownMenuItem key={subItem.path} asChild>
                         <Link
                           to={subItem.path}
                           className={`w-full cursor-pointer ${
                             location.pathname === subItem.path
-                              ? "text-primary font-medium"
-                              : "text-foreground"
+                              ? "text-primary font-semibold"
+                              : "text-foreground hover:text-primary"
                           }`}
                         >
                           {subItem.name}
@@ -101,9 +95,9 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`font-medium text-sm transition-colors duration-200 hover:text-primary ${
+                  className={`font-medium text-sm transition-colors hover:text-primary relative ${
                     location.pathname === link.path
-                      ? "text-primary"
+                      ? "text-primary after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary"
                       : "text-foreground"
                   }`}
                 >
@@ -139,7 +133,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border bg-card">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border bg-white">
             <nav className="flex flex-col gap-1 pt-4">
               {navLinks.map((link) =>
                 link.submenu ? (
