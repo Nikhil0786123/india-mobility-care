@@ -9,6 +9,7 @@ import Solutions from "./pages/Solutions";
 import Stories from "./pages/Stories";
 import Contact from "./pages/Contact";
 import Doctor from "./pages/Doctor";
+import WhyChooseUs from "./pages/WhyChooseUs";
 import ProstheticSolutions from "./pages/solutions/ProstheticSolutions";
 import OrthoticSolutions from "./pages/solutions/OrthoticSolutions";
 import PediatricSolutions from "./pages/solutions/PediatricSolutions";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/doctor" element={<Doctor />} />
+          <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/prosthetics" element={<ProstheticSolutions />} />
           <Route path="/solutions/orthotics" element={<OrthoticSolutions />} />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Footprints, ShieldCheck, Baby, Heart, Users, Wrench, Phone, Sparkles, HeartHandshake } from "lucide-react";
+import { Footprints, ShieldCheck, Baby, Heart, Users, Wrench, Phone, Sparkles, HeartHandshake, MessageCircle, ArrowRight, Award, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,6 +17,7 @@ import before1 from "@/assets/before-1.jpg";
 import after1 from "@/assets/after-1.jpg";
 import before2 from "@/assets/before-2.jpg";
 import after2 from "@/assets/after-2.jpg";
+import drAbhinav from "@/assets/dr-abhinav.png";
 
 const Index = () => {
   const solutions = [
@@ -26,6 +27,7 @@ const Index = () => {
       description:
         "Advanced artificial limbs designed for comfort and natural movement, customized for Indian body types and lifestyle.",
       image: prostheticLeg,
+      link: "/solutions/prosthetics",
     },
     {
       icon: <ShieldCheck className="w-6 h-6" />,
@@ -33,6 +35,7 @@ const Index = () => {
       description:
         "Braces and supports for knees, ankles, and spine that help improve mobility and reduce pain.",
       image: orthoticBrace,
+      link: "/solutions/orthotics",
     },
     {
       icon: <Baby className="w-6 h-6" />,
@@ -40,6 +43,7 @@ const Index = () => {
       description:
         "Child-friendly prosthetics with growth-adjustable designs that grow with your child.",
       image: pediatricProsthetic,
+      link: "/solutions/pediatric",
     },
     {
       icon: <Heart className="w-6 h-6" />,
@@ -47,10 +51,11 @@ const Index = () => {
       description:
         "Specialized footwear and insoles for diabetic patients to prevent complications and ensure comfort.",
       image: diabeticFootcare,
+      link: "/solutions/diabetic-footcare",
     },
   ];
 
-  const trustItems = [
+  const whyChooseUs = [
     {
       icon: <Users className="w-7 h-7" />,
       title: "Custom Fit for Indian Body Types",
@@ -64,7 +69,7 @@ const Index = () => {
         "We use the latest prosthetic and orthotic technologies available globally.",
     },
     {
-      icon: <Wrench className="w-7 h-7" />,
+      icon: <Award className="w-7 h-7" />,
       title: "Experienced Professionals",
       description:
         "Our team includes certified prosthetists with decades of experience.",
@@ -79,7 +84,13 @@ const Index = () => {
       icon: <Phone className="w-7 h-7" />,
       title: "Post-Fitting Support",
       description:
-        "Ongoing support and adjustments to ensure long-term comfort and functionality.",
+        "Ongoing support and adjustments to ensure long-term comfort.",
+    },
+    {
+      icon: <Shield className="w-7 h-7" />,
+      title: "Ethical & Transparent",
+      description:
+        "Honest communication with no hidden costs or surprises.",
     },
   ];
 
@@ -161,7 +172,10 @@ const Index = () => {
       <section className="section-padding bg-muted">
         <div className="container-custom">
           <ScrollReveal>
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Comprehensive Care
+              </div>
               <h2 className="font-outfit font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Our Solutions
               </h2>
@@ -181,22 +195,25 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="text-center mt-10">
+            <div className="text-center mt-12">
               <Button variant="default" size="lg" asChild>
-                <Link to="/solutions">View All Solutions</Link>
+                <Link to="/solutions">View All Solutions <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Why Choose Us Section */}
       <section className="section-padding">
         <div className="container-custom">
           <ScrollReveal>
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Why Patients Trust Us
+              </div>
               <h2 className="font-outfit font-bold text-3xl md:text-4xl text-foreground mb-4">
-                Why Choose Us?
+                Why Choose P&O Robotics?
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                 We are committed to providing the highest quality care with a
@@ -205,13 +222,31 @@ const Index = () => {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {trustItems.map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyChooseUs.map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 100}>
-                <TrustItem {...item} />
+                <div className="bg-card p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 group h-full border border-border/50 hover:border-primary/30">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-outfit font-semibold text-lg text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/why-choose-us">Learn More About Us <ArrowRight className="w-4 h-4 ml-2" /></Link>
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -219,7 +254,10 @@ const Index = () => {
       <section className="section-padding bg-muted">
         <div className="container-custom">
           <ScrollReveal>
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Patient Transformations
+              </div>
               <h2 className="font-outfit font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Real Patients. Real Transformation.
               </h2>
@@ -235,12 +273,61 @@ const Index = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="text-center mt-10">
+            <div className="text-center mt-12">
               <Button variant="default" size="lg" asChild>
-                <Link to="/stories">View More Stories</Link>
+                <Link to="/stories">View All Stories <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Doctor Highlight Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal>
+              <div className="relative">
+                <div className="relative rounded-3xl overflow-hidden shadow-xl bg-gradient-to-b from-muted to-primary/10">
+                  <img
+                    src={drAbhinav}
+                    alt="Dr. Abhinav Bhatnagar"
+                    className="w-full aspect-[4/5] object-cover object-top"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-5 rounded-2xl shadow-xl hidden md:block">
+                  <div className="text-3xl font-bold">15+</div>
+                  <div className="text-xs opacity-90">Years Experience</div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200}>
+              <div>
+                <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                  Meet Our Expert
+                </div>
+                <h2 className="font-outfit font-bold text-3xl md:text-4xl text-foreground mb-4">
+                  Dr. Abhinav Bhatnagar
+                </h2>
+                <p className="text-xl text-primary font-medium mb-4">
+                  Prosthetics & Orthotics Specialist
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  With over 15 years of experience, Dr. Bhatnagar has transformed thousands of 
+                  lives across India. His patient-centered approach combines cutting-edge technology 
+                  with compassionate care.
+                </p>
+                <blockquote className="border-l-4 border-primary pl-4 italic text-foreground mb-8">
+                  "My goal is not just to fit a prosthetic limb, but to restore hope, independence, 
+                  and the confidence to live life fully."
+                </blockquote>
+                <Button variant="default" size="lg" asChild>
+                  <Link to="/doctor">Meet Our Doctor <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                </Button>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -260,9 +347,17 @@ const Index = () => {
                 Take the first step towards regaining your independence. Our team of
                 experts is ready to help you find the perfect solution.
               </p>
-              <Button variant="cta" size="xl" asChild>
-                <Link to="/contact">Book Your Consultation</Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="cta" size="xl" asChild>
+                  <Link to="/contact">Book Your Consultation</Link>
+                </Button>
+                <Button variant="heroOutline" size="xl" asChild className="group">
+                  <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    WhatsApp Us
+                  </a>
+                </Button>
+              </div>
             </ScrollReveal>
           </div>
         </div>

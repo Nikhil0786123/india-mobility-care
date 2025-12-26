@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
-import doctorPatient from "@/assets/doctor-patient.jpg";
+import drAbhinav from "@/assets/dr-abhinav.png";
 
 const Doctor = () => {
   const expertise = [
@@ -73,13 +73,12 @@ const Doctor = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
               <div className="relative">
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-b from-muted to-primary/10">
                   <img
-                    src={doctorPatient}
+                    src={drAbhinav}
                     alt="Dr. Abhinav Bhatnagar - Prosthetics & Orthotics Specialist"
-                    className="w-full aspect-[4/5] object-cover"
+                    className="w-full aspect-[3/4] object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-transparent" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl hidden md:block">
                   <div className="text-4xl font-bold">15+</div>

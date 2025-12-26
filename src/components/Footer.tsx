@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
+import logo from "@/assets/logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
@@ -10,13 +12,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary-foreground rounded-xl flex items-center justify-center">
-                <span className="text-foreground font-bold text-sm">P&O</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-outfit font-bold text-base leading-tight">P&O ROBOTICS</span>
-                <span className="text-xs opacity-70 leading-tight">Artificial Limbs Solutions LLP</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="P&O Robotics Artificial Limbs Solutions LLP" 
+                className="h-20 w-auto object-contain bg-white rounded-lg p-2"
+              />
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
               Restoring mobility and rebuilding lives across India with advanced
@@ -32,6 +32,7 @@ const Footer = () => {
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
                 { name: "Our Doctor", path: "/doctor" },
+                { name: "Why Choose Us", path: "/why-choose-us" },
                 { name: "Patient Stories", path: "/stories" },
                 { name: "Contact Us", path: "/contact" },
               ].map((link) => (
