@@ -11,11 +11,11 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-primary-foreground rounded-xl flex items-center justify-center">
-                <span className="text-foreground font-bold text-xl">M</span>
+                <span className="text-foreground font-bold text-sm">P&O</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-outfit font-bold text-xl">MobilityFirst</span>
-                <span className="text-xs opacity-70">Prosthetics & Orthotics</span>
+                <span className="font-outfit font-bold text-base leading-tight">P&O ROBOTICS</span>
+                <span className="text-xs opacity-70 leading-tight">Artificial Limbs Solutions LLP</span>
               </div>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
@@ -31,7 +31,7 @@ const Footer = () => {
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
-                { name: "Our Solutions", path: "/solutions" },
+                { name: "Our Doctor", path: "/doctor" },
                 { name: "Patient Stories", path: "/stories" },
                 { name: "Contact Us", path: "/contact" },
               ].map((link) => (
@@ -52,18 +52,17 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Our Solutions</h4>
             <ul className="space-y-3">
               {[
-                "Prosthetic Limbs",
-                "Orthotic Supports",
-                "Pediatric Solutions",
-                "Diabetic Foot Care",
-                "Spinal Supports",
+                { name: "Prosthetic Limbs", path: "/solutions/prosthetics" },
+                { name: "Orthotic Supports", path: "/solutions/orthotics" },
+                { name: "Pediatric Solutions", path: "/solutions/pediatric" },
+                { name: "Diabetic Foot Care", path: "/solutions/diabetic-footcare" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.path}>
                   <Link
-                    to="/solutions"
+                    to={item.path}
                     className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -92,10 +91,10 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent" />
                 <a
-                  href="mailto:care@mobilityfirst.in"
+                  href="mailto:care@porobotics.in"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
-                  care@mobilityfirst.in
+                  care@porobotics.in
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -113,7 +112,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} MobilityFirst India. All rights reserved.
+            © {new Date().getFullYear()} P&O ROBOTICS ARTIFICIAL LIMBS SOLUTIONS LLP. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link

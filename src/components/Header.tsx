@@ -1,12 +1,28 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Our Solutions", path: "/solutions" },
+  { name: "Our Doctor", path: "/doctor" },
+  {
+    name: "Solutions",
+    path: "/solutions",
+    submenu: [
+      { name: "Prosthetic Solutions", path: "/solutions/prosthetics" },
+      { name: "Orthotic Solutions", path: "/solutions/orthotics" },
+      { name: "Pediatric Care", path: "/solutions/pediatric" },
+      { name: "Diabetic Foot Care", path: "/solutions/diabetic-footcare" },
+    ],
+  },
   { name: "Patient Stories", path: "/stories" },
   { name: "Contact", path: "/contact" },
 ];
@@ -14,6 +30,7 @@ const navLinks = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -35,35 +52,60 @@ const Header = () => {
       <div className="container-custom section-padding !py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">M</span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300 animate-fade-in">
+              <span className="text-primary-foreground font-bold text-lg">P&O</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-outfit font-bold text-xl text-foreground">
-                MobilityFirst
+              <span className="font-outfit font-bold text-sm md:text-base text-foreground leading-tight">
+                P&O ROBOTICS
               </span>
-              <span className="text-xs text-muted-foreground">
-                Prosthetics & Orthotics
+              <span className="text-[10px] md:text-xs text-muted-foreground leading-tight">
+                Artificial Limbs Solutions LLP
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-medium transition-colors duration-200 hover:text-primary ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-foreground/80"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-center gap-6">
+            {navLinks.map((link) =>
+              link.submenu ? (
+                <DropdownMenu key={link.path}>
+                  <DropdownMenuTrigger className="flex items-center gap-1 font-medium transition-colors duration-200 hover:text-primary text-foreground/80 outline-none">
+                    {link.name}
+                    <ChevronDown className="w-4 h-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-56">
+                    {link.submenu.map((subItem) => (
+                      <DropdownMenuItem key={subItem.path} asChild>
+                        <Link
+                          to={subItem.path}
+                          className={`w-full cursor-pointer ${
+                            location.pathname === subItem.path
+                              ? "text-primary"
+                              : ""
+                          }`}
+                        >
+                          {subItem.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`font-medium transition-colors duration-200 hover:text-primary ${
+                    location.pathname === link.path
+                      ? "text-primary"
+                      : "text-foreground/80"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* CTA Button */}
@@ -93,21 +135,57 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-4 pt-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`font-medium py-2 transition-colors ${
-                    location.pathname === link.path
-                      ? "text-primary"
-                      : "text-foreground/80"
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <nav className="flex flex-col gap-2 pt-4">
+              {navLinks.map((link) =>
+                link.submenu ? (
+                  <div key={link.path}>
+                    <button
+                      className="w-full flex items-center justify-between font-medium py-2 text-foreground/80"
+                      onClick={() =>
+                        setOpenSubmenu(openSubmenu === link.path ? null : link.path)
+                      }
+                    >
+                      {link.name}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          openSubmenu === link.path ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {openSubmenu === link.path && (
+                      <div className="pl-4 space-y-2 animate-fade-in">
+                        {link.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.path}
+                            to={subItem.path}
+                            className={`block py-2 text-sm ${
+                              location.pathname === subItem.path
+                                ? "text-primary"
+                                : "text-muted-foreground"
+                            }`}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`font-medium py-2 transition-colors ${
+                      location.pathname === link.path
+                        ? "text-primary"
+                        : "text-foreground/80"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                )
+              )}
               <Button variant="cta" className="mt-2" asChild>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   Book Consultation
