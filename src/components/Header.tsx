@@ -54,13 +54,21 @@ const Header = () => {
     >
       <div className="container-custom section-padding !py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group animate-fade-in">
+          {/* Logo + Brand Name */}
+          <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={logo} 
               alt="P&O Robotics Artificial Limbs Solutions LLP" 
-              className="h-14 md:h-16 w-auto object-contain"
+              className="h-12 md:h-14 w-auto object-contain"
             />
+            <div className="hidden sm:flex flex-col leading-tight">
+              <span className="font-outfit font-bold text-base md:text-lg text-primary tracking-tight">
+                P&O ROBOTICS
+              </span>
+              <span className="font-outfit font-medium text-[10px] md:text-xs text-foreground/80 tracking-wide uppercase">
+                Artificial Limbs Solutions LLP
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

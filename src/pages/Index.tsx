@@ -132,10 +132,15 @@ const Index = () => {
         {/* Content */}
         <div className="relative container-custom section-padding pt-32">
           <div className="max-w-2xl">
-            <h1 className="font-outfit font-bold text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6 animate-fade-up">
-              Restoring Mobility.
+            <div className="mb-4 animate-fade-up">
+              <span className="inline-block bg-accent/20 text-accent px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm">
+                P&O Robotics Artificial Limbs Solutions
+              </span>
+            </div>
+            <h1 className="font-outfit font-bold text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "50ms" }}>
+              Trusted Prosthetic &
               <br />
-              <span className="text-accent">Rebuilding Lives.</span>
+              <span className="text-accent">Orthotic Care in India</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
               Advanced Artificial Limb & Orthotic Solutions Designed for Indian Patients
@@ -164,6 +169,27 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges Strip */}
+      <section className="bg-primary/5 border-y border-primary/10">
+        <div className="container-custom py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { icon: <Users className="w-5 h-5" />, text: "Indian Patient Focused" },
+              { icon: <Wrench className="w-5 h-5" />, text: "Custom Prosthetic Solutions" },
+              { icon: <Award className="w-5 h-5" />, text: "Expert Medical Care" },
+              { icon: <HeartHandshake className="w-5 h-5" />, text: "Consultation Based" },
+            ].map((badge) => (
+              <div key={badge.text} className="flex items-center gap-3 justify-center text-center">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  {badge.icon}
+                </div>
+                <span className="font-medium text-sm text-foreground">{badge.text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
