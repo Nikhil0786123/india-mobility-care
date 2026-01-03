@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <img 
                 src={logo} 
-                alt="P&O Robotics Artificial Limbs Solutions LLP" 
+                alt="P&O Robotics Artificial Limbs Solutions" 
                 className="h-20 w-auto object-contain bg-white rounded-lg p-2"
               />
             </div>
@@ -115,7 +115,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} P&O ROBOTICS ARTIFICIAL LIMBS SOLUTIONS LLP. All rights reserved.
+            © {new Date().getFullYear()} P&O ROBOTICS ARTIFICIAL LIMBS SOLUTIONS. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link

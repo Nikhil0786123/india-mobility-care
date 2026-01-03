@@ -9,15 +9,16 @@ import TrustItem from "@/components/TrustItem";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 import heroPatient from "@/assets/hero-patient.jpg";
-import prostheticLeg from "@/assets/prosthetic-leg.jpg";
-import orthoticBrace from "@/assets/orthotic-brace.jpg";
-import pediatricProsthetic from "@/assets/pediatric-prosthetic.jpg";
-import diabeticFootcare from "@/assets/diabetic-footcare.jpg";
+import belowKneeProsthetic from "@/assets/below-knee-prosthetic.png";
+import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.png";
+import growthAdjustable from "@/assets/growth-adjustable-solutions.png";
+import therapeuticInsoles from "@/assets/therapeutic-insoles.png";
 import before1 from "@/assets/before-1.jpg";
 import after1 from "@/assets/after-1.jpg";
 import before2 from "@/assets/before-2.jpg";
 import after2 from "@/assets/after-2.jpg";
 import drAbhinav from "@/assets/dr-abhinav.png";
+import logo from "@/assets/logo.png";
 
 const Index = () => {
   const solutions = [
@@ -26,7 +27,7 @@ const Index = () => {
       title: "Prosthetic Limbs",
       description:
         "Advanced artificial limbs designed for comfort and natural movement, customized for Indian body types and lifestyle.",
-      image: prostheticLeg,
+      image: belowKneeProsthetic,
       link: "/solutions/prosthetics",
     },
     {
@@ -34,7 +35,7 @@ const Index = () => {
       title: "Orthotic Supports",
       description:
         "Braces and supports for knees, ankles, and spine that help improve mobility and reduce pain.",
-      image: orthoticBrace,
+      image: ankleFootOrthosis,
       link: "/solutions/orthotics",
     },
     {
@@ -42,7 +43,7 @@ const Index = () => {
       title: "Pediatric Solutions",
       description:
         "Child-friendly prosthetics with growth-adjustable designs that grow with your child.",
-      image: pediatricProsthetic,
+      image: growthAdjustable,
       link: "/solutions/pediatric",
     },
     {
@@ -50,7 +51,7 @@ const Index = () => {
       title: "Diabetic Foot Care",
       description:
         "Specialized footwear and insoles for diabetic patients to prevent complications and ensure comfort.",
-      image: diabeticFootcare,
+      image: therapeuticInsoles,
       link: "/solutions/diabetic-footcare",
     },
   ];
@@ -385,6 +386,30 @@ const Index = () => {
                 </Button>
               </div>
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Reinforcement Section - Logo & About */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+            {/* Large Logo */}
+            <img 
+              src={logo} 
+              alt="P&O Robotics Artificial Limbs Solutions" 
+              className="h-32 sm:h-40 md:h-52 lg:h-64 w-auto object-contain mb-8"
+            />
+            
+            {/* About Heading */}
+            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-primary mb-6">
+              About P&O Robotics Artificial Limbs Solutions
+            </h2>
+            
+            {/* About Description */}
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
+              P&O Robotics Artificial Limbs Solutions is dedicated to improving mobility and quality of life through advanced prosthetic and orthotic care. We provide customized artificial limb and support solutions designed specifically for Indian patients, combining medical expertise, modern technology, and compassionate care. Our focus is on comfort, functionality, and long-term support for every patient.
+            </p>
           </div>
         </div>
       </section>
