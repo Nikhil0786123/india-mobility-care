@@ -118,7 +118,7 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-48 md:pt-56 lg:pt-64">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-20">
         {/* Background Image with Better Overlay */}
         <div className="absolute inset-0">
           <img
