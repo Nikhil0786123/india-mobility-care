@@ -174,6 +174,30 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Brand Reinforcement Section - Logo & About */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+            {/* Large Logo */}
+            <img 
+              src={logo} 
+              alt="P&O Robotics Artificial Limbs Solutions" 
+              className="h-32 sm:h-40 md:h-52 lg:h-64 w-auto object-contain mb-8"
+            />
+            
+            {/* About Heading */}
+            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-primary mb-6">
+              About P&O Robotics Artificial Limbs Solutions
+            </h2>
+            
+            {/* About Description */}
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
+              P&O Robotics Artificial Limbs Solutions is dedicated to improving mobility and quality of life through advanced prosthetic and orthotic care. We provide customized artificial limb and support solutions designed specifically for Indian patients, combining medical expertise, modern technology, and compassionate care. Our focus is on comfort, functionality, and long-term support for every patient.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Badges Strip */}
       <section className="bg-white border-y border-border py-6 md:py-8">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
@@ -390,29 +414,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Brand Reinforcement Section - Logo & About */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container-custom px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            {/* Large Logo */}
-            <img 
-              src={logo} 
-              alt="P&O Robotics Artificial Limbs Solutions" 
-              className="h-32 sm:h-40 md:h-52 lg:h-64 w-auto object-contain mb-8"
-            />
-            
-            {/* About Heading */}
-            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-primary mb-6">
-              About P&O Robotics Artificial Limbs Solutions
-            </h2>
-            
-            {/* About Description */}
-            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
-              P&O Robotics Artificial Limbs Solutions is dedicated to improving mobility and quality of life through advanced prosthetic and orthotic care. We provide customized artificial limb and support solutions designed specifically for Indian patients, combining medical expertise, modern technology, and compassionate care. Our focus is on comfort, functionality, and long-term support for every patient.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
