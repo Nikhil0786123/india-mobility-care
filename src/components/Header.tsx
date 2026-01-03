@@ -45,21 +45,21 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white via-blue-50/30 to-white shadow-md border-b border-border">
       <div className="container-custom px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           {/* Logo + Brand Name */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-3">
+          <Link to="/" className="flex items-center gap-3 sm:gap-4">
             <img 
               src={logo} 
               alt="P&O Robotics Artificial Limbs Solutions LLP" 
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              className="h-14 sm:h-16 md:h-20 w-auto object-contain"
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-outfit font-bold text-sm sm:text-base md:text-lg text-primary">
+              <span className="font-outfit font-bold text-base sm:text-lg md:text-xl text-primary tracking-tight">
                 P&O ROBOTICS
               </span>
-              <span className="font-outfit font-medium text-[9px] sm:text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide">
+              <span className="font-outfit font-semibold text-[10px] sm:text-xs md:text-sm text-foreground/80 uppercase tracking-wide">
                 Artificial Limbs Solutions LLP
               </span>
             </div>
@@ -110,11 +110,11 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+911234567890"
+              href="tel:+919717661811"
               className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium text-sm">+91 123 456 7890</span>
+              <span className="font-medium text-sm">+91 97176 61811</span>
             </a>
             <Button variant="cta" asChild>
               <Link to="/contact">Book Consultation</Link>

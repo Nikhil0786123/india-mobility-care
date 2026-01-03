@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
-import diabeticFootcare from "@/assets/diabetic-footcare.jpg";
+import therapeuticInsoles from "@/assets/therapeutic-insoles.png";
+import customOrthoticSupports from "@/assets/custom-orthotic-supports.png";
 
 const DiabeticFootcare = () => {
   const awarenessPoints = [
@@ -32,7 +33,7 @@ const DiabeticFootcare = () => {
       title: "Custom Diabetic Footwear",
       tagline: "Protection and comfort for diabetic feet",
       description: "Specially designed therapeutic footwear that accommodates diabetic foot conditions, reduces pressure points, and prevents ulcers. Available in various comfortable styles suitable for Indian lifestyle.",
-      image: diabeticFootcare,
+      image: customOrthoticSupports,
       whoIsItFor: [
         "Type 1 and Type 2 diabetes patients",
         "Those with peripheral neuropathy",
@@ -68,7 +69,7 @@ const DiabeticFootcare = () => {
       title: "Therapeutic Insoles",
       tagline: "Custom support for every step",
       description: "Custom-molded insoles specifically designed for diabetic feet, providing optimal cushioning, pressure redistribution, and support. Helps prevent complications and ensures comfortable walking.",
-      image: diabeticFootcare,
+      image: therapeuticInsoles,
       whoIsItFor: [
         "All diabetic patients",
         "Those with plantar pressure issues",
@@ -104,7 +105,7 @@ const DiabeticFootcare = () => {
       title: "Preventive Foot Care Solutions",
       tagline: "Stay one step ahead of complications",
       description: "Comprehensive preventive solutions including protective socks, foot care products, and regular assessment programs designed to keep diabetic feet healthy and complication-free.",
-      image: diabeticFootcare,
+      image: therapeuticInsoles,
       whoIsItFor: [
         "Newly diagnosed diabetics",
         "All diabetes patients",
@@ -228,7 +229,7 @@ const DiabeticFootcare = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full rounded-2xl shadow-xl"
+                    className="w-full max-w-md mx-auto rounded-2xl shadow-xl bg-white p-4"
                   />
                 </div>
               </div>

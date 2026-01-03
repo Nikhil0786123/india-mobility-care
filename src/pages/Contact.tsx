@@ -53,20 +53,20 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: ["+91 123 456 7890", "+91 987 654 3210"],
-      action: "tel:+911234567890",
+      details: ["+91 97176 61811"],
+      action: "tel:+919717661811",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["care@mobilityfirst.in", "support@mobilityfirst.in"],
-      action: "mailto:care@mobilityfirst.in",
+      details: ["care@porobotics.in"],
+      action: "mailto:care@porobotics.in",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
-      details: ["123 Healthcare Complex", "Bandra West, Mumbai 400050"],
-      action: "https://maps.google.com",
+      details: ["1679, Begumpur, Near MCD School,", "Delhi – 110086"],
+      action: "https://maps.google.com/?q=Begumpur+Delhi+110086",
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -258,7 +258,7 @@ const Contact = () => {
               {/* WhatsApp CTA */}
               <ScrollReveal delay={200}>
                 <a
-                  href="https://wa.me/911234567890?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20prosthetic%20solutions"
+                  href="https://wa.me/919717661811?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20prosthetic%20solutions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 bg-[hsl(142,70%,45%)] text-primary-foreground p-6 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300"

@@ -5,7 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
-import prostheticLeg from "@/assets/prosthetic-leg.jpg";
+import aboveKneeProsthetic from "@/assets/above-knee-prosthetic.png";
+import belowKneeProsthetic from "@/assets/below-knee-prosthetic.png";
+import upperLimbProsthesis from "@/assets/upper-limb-prosthesis.png";
+import partialCosmeticProsthesis from "@/assets/partial-cosmetic-prosthesis.png";
 
 const ProstheticSolutions = () => {
   const products = [
@@ -14,7 +17,7 @@ const ProstheticSolutions = () => {
       title: "Above Knee Prosthesis",
       tagline: "Advanced mobility for above-knee amputees",
       description: "Our above-knee prosthetics feature advanced microprocessor-controlled knee joints that provide natural walking patterns, stability on uneven terrain, and smooth transitions between activities.",
-      image: prostheticLeg,
+      image: aboveKneeProsthetic,
       whoIsItFor: [
         "Individuals with above-knee (transfemoral) amputation",
         "Those seeking active lifestyle restoration",
@@ -49,7 +52,7 @@ const ProstheticSolutions = () => {
       title: "Below Knee Prosthesis",
       tagline: "Lightweight comfort for active living",
       description: "Designed for below-knee amputees, our prosthetics offer exceptional comfort with lightweight construction and energy-return technology for an active lifestyle.",
-      image: prostheticLeg,
+      image: belowKneeProsthetic,
       whoIsItFor: [
         "Individuals with below-knee (transtibial) amputation",
         "Active individuals and athletes",
@@ -84,7 +87,7 @@ const ProstheticSolutions = () => {
       title: "Upper Limb Prosthesis",
       tagline: "Restore hand function and independence",
       description: "Our upper limb prosthetics range from body-powered to advanced myoelectric options, designed to restore hand function and enhance daily living activities.",
-      image: prostheticLeg,
+      image: upperLimbProsthesis,
       whoIsItFor: [
         "Individuals with arm or hand amputation",
         "Those needing functional restoration",
@@ -119,7 +122,7 @@ const ProstheticSolutions = () => {
       title: "Partial & Cosmetic Prosthesis",
       tagline: "Natural-looking restoration",
       description: "Highly realistic cosmetic prosthetics that match your skin tone, texture, and appearance perfectly. Ideal for those seeking natural-looking restoration.",
-      image: prostheticLeg,
+      image: partialCosmeticProsthesis,
       whoIsItFor: [
         "Partial hand or finger amputees",
         "Those prioritizing cosmetic appearance",
@@ -207,7 +210,7 @@ const ProstheticSolutions = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full rounded-2xl shadow-xl"
+                    className="w-full max-w-md mx-auto rounded-2xl shadow-xl bg-white p-4"
                   />
                 </div>
               </div>

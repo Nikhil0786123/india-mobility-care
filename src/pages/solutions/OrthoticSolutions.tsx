@@ -5,7 +5,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
-import orthoticBrace from "@/assets/orthotic-brace.jpg";
+import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.png";
+import spinalOrthosis from "@/assets/spinal-orthosis.png";
+import customOrthoticSupports from "@/assets/custom-orthotic-supports.png";
 
 const OrthoticSolutions = () => {
   const products = [
@@ -14,7 +16,7 @@ const OrthoticSolutions = () => {
       title: "Knee Braces",
       tagline: "Support, stability, and pain relief",
       description: "Comprehensive range of knee braces designed for ligament injuries, arthritis management, post-surgical recovery, and sports activities. Custom-fitted for maximum support and comfort.",
-      image: orthoticBrace,
+      image: spinalOrthosis,
       whoIsItFor: [
         "ACL/PCL/MCL injury patients",
         "Arthritis and joint pain sufferers",
@@ -50,7 +52,7 @@ const OrthoticSolutions = () => {
       title: "Ankle Foot Orthosis (AFO)",
       tagline: "Restore walking confidence",
       description: "Custom-molded ankle foot orthoses designed for drop foot, stroke recovery, cerebral palsy, and other conditions affecting ankle and foot function. Lightweight and effective for daily use.",
-      image: orthoticBrace,
+      image: ankleFootOrthosis,
       whoIsItFor: [
         "Drop foot patients",
         "Stroke survivors",
@@ -86,7 +88,7 @@ const OrthoticSolutions = () => {
       title: "Spinal Orthosis",
       tagline: "Support your spine, improve your life",
       description: "Comprehensive spinal support solutions including lumbar supports, thoraco-lumbar braces, and cervical orthoses. Designed for posture correction, pain management, and post-injury recovery.",
-      image: orthoticBrace,
+      image: spinalOrthosis,
       whoIsItFor: [
         "Lower back pain patients",
         "Scoliosis patients",
@@ -122,7 +124,7 @@ const OrthoticSolutions = () => {
       title: "Custom Orthotic Supports",
       tagline: "Tailored solutions for unique needs",
       description: "Specialized custom orthotic supports for various conditions including wrist splints, elbow braces, and other supportive devices. Each solution is individually crafted for your specific needs.",
-      image: orthoticBrace,
+      image: customOrthoticSupports,
       whoIsItFor: [
         "Carpal tunnel syndrome patients",
         "Tennis/golfer's elbow patients",
@@ -210,7 +212,7 @@ const OrthoticSolutions = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full rounded-2xl shadow-xl"
+                    className="w-full max-w-md mx-auto rounded-2xl shadow-xl bg-white p-4"
                   />
                 </div>
               </div>
