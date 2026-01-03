@@ -43,7 +43,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={logo} 
-              alt="P&O Robotics Artificial Limbs Solutions LLP" 
+              alt="P&O Robotics Artificial Limbs Solutions" 
               className="h-12 sm:h-14 md:h-16 w-auto object-contain"
             />
             <div className="hidden sm:flex flex-col leading-tight">
@@ -51,7 +51,7 @@ const Header = () => {
                 P&O ROBOTICS
               </span>
               <span className="font-outfit font-medium text-[10px] md:text-xs text-foreground/70 uppercase tracking-wide">
-                Artificial Limbs Solutions LLP
+                Artificial Limbs Solutions
               </span>
             </div>
           </Link>
