@@ -15,6 +15,7 @@ import OrthoticSolutions from "./pages/solutions/OrthoticSolutions";
 import PediatricSolutions from "./pages/solutions/PediatricSolutions";
 import DiabeticFootcare from "./pages/solutions/DiabeticFootcare";
 import NotFound from "./pages/NotFound";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <WhatsAppButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
-import pediatricProsthetic from "@/assets/pediatric-prosthetic.jpg";
+import growthAdjustable from "@/assets/growth-adjustable-solutions.png";
 
 const PediatricSolutions = () => {
   const features = [
@@ -37,7 +37,7 @@ const PediatricSolutions = () => {
       title: "Child-Friendly Prosthetics",
       tagline: "Designed for play, built for life",
       description: "Our pediatric prosthetics are specifically designed for children, featuring colorful, fun designs that kids love while maintaining the highest standards of functionality and comfort.",
-      image: pediatricProsthetic,
+      image: growthAdjustable,
       whoIsItFor: [
         "Children with congenital limb differences",
         "Pediatric amputation patients",
@@ -65,7 +65,7 @@ const PediatricSolutions = () => {
       title: "Growth-Adjustable Solutions",
       tagline: "Grows with your child",
       description: "Our innovative modular prosthetics and orthotics can be adjusted as your child grows, providing optimal fit and function throughout their development while being cost-effective.",
-      image: pediatricProsthetic,
+      image: growthAdjustable,
       whoIsItFor: [
         "Growing children needing long-term solutions",
         "Parents seeking cost-effective options",
@@ -180,7 +180,7 @@ const PediatricSolutions = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full rounded-2xl shadow-xl"
+                    className="w-full max-w-md mx-auto rounded-2xl shadow-xl bg-white p-4"
                   />
                 </div>
               </div>

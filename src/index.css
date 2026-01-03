@@ -246,6 +246,19 @@
     }
   }
 
+  @keyframes bounceGentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+
   .parallax {
     transform: translateZ(0);
     will-change: transform;
