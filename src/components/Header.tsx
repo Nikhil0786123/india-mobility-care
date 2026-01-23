@@ -36,21 +36,25 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-border">
-      <div className="container-custom px-4 sm:px-6 lg:px-8 py-3">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white via-sky-50/80 to-teal-50/60 shadow-lg border-b border-primary/10">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 py-2 sm:py-3">
         <div className="flex items-center justify-between">
-          {/* Logo + Brand Name */}
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={logo} 
-              alt="P&O Robotics Artificial Limbs Solutions" 
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain"
-            />
+          {/* Logo + Brand Name - Premium Display */}
+          <Link to="/" className="flex items-center gap-3 sm:gap-4 group">
+            <div className="relative">
+              <img 
+                src={logo} 
+                alt="P&O Robotics Artificial Limbs Solutions" 
+                className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full -z-10"></div>
+            </div>
             <div className="hidden sm:flex flex-col leading-tight">
-              <span className="font-outfit font-bold text-base md:text-lg text-primary tracking-tight">
+              <span className="font-outfit font-bold text-lg md:text-xl lg:text-2xl text-primary tracking-tight drop-shadow-sm">
                 P&O ROBOTICS
               </span>
-              <span className="font-outfit font-medium text-[10px] md:text-xs text-foreground/70 uppercase tracking-wide">
+              <span className="font-outfit font-semibold text-xs md:text-sm text-foreground/80 uppercase tracking-wider">
                 Artificial Limbs Solutions
               </span>
             </div>

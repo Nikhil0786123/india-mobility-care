@@ -11,12 +11,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col items-start gap-3">
               <img 
                 src={logo} 
                 alt="P&O Robotics Artificial Limbs Solutions" 
-                className="h-20 w-auto object-contain bg-white rounded-lg p-2"
+                className="h-24 w-auto object-contain bg-white rounded-xl p-3 shadow-lg"
               />
+              <div className="flex flex-col">
+                <span className="font-outfit font-bold text-lg text-primary-foreground">
+                  P&O ROBOTICS
+                </span>
+                <span className="font-outfit font-medium text-sm text-primary-foreground/80 uppercase tracking-wide">
+                  Artificial Limbs Solutions
+                </span>
+              </div>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
               Restoring mobility and rebuilding lives across India with advanced

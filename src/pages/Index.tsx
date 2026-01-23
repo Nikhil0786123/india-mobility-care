@@ -119,7 +119,7 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-20">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-24 sm:pt-28 md:pt-32">
         {/* Background Image with Better Overlay */}
         <div className="absolute inset-0">
           <img
@@ -174,21 +174,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Brand Reinforcement Section - Logo & About */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container-custom px-4 sm:px-6 lg:px-8">
+      {/* Brand Reinforcement Section - Premium Logo Display */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white via-sky-50/30 to-teal-50/20 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-60 h-60 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container-custom px-4 sm:px-6 lg:px-8 relative">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            {/* Large Logo */}
-            <img 
-              src={logo} 
-              alt="P&O Robotics Artificial Limbs Solutions" 
-              className="h-32 sm:h-40 md:h-52 lg:h-64 w-auto object-contain mb-8"
-            />
+            {/* Premium Large Logo with Enhanced Visibility */}
+            <div className="relative mb-8 md:mb-10">
+              {/* Glow effect behind logo */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 blur-3xl scale-110 rounded-full"></div>
+              
+              <img 
+                src={logo} 
+                alt="P&O Robotics Artificial Limbs Solutions" 
+                className="relative h-40 sm:h-52 md:h-64 lg:h-80 xl:h-96 w-auto object-contain drop-shadow-xl"
+              />
+            </div>
+            
+            {/* Organization Name - Bold & Prominent */}
+            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary mb-4 tracking-tight drop-shadow-sm">
+              P&O ROBOTICS
+            </h2>
+            <h3 className="font-outfit font-semibold text-lg sm:text-xl md:text-2xl text-foreground/80 uppercase tracking-widest mb-8">
+              Artificial Limbs Solutions
+            </h3>
+            
+            {/* Decorative divider */}
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/50"></div>
+              <div className="w-3 h-3 rounded-full bg-primary/60"></div>
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/50"></div>
+            </div>
             
             {/* About Heading */}
-            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-primary mb-6">
-              About P&O Robotics Artificial Limbs Solutions
-            </h2>
+            <h4 className="font-outfit font-bold text-xl sm:text-2xl md:text-3xl text-foreground mb-6">
+              About Us
+            </h4>
             
             {/* About Description */}
             <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
