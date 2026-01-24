@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import PageLoader from "@/components/PageLoader";
+import AnimatedImage from "@/components/AnimatedImage";
 
-import aboveKneeProsthetic from "@/assets/above-knee-prosthetic.png";
-import belowKneeProsthetic from "@/assets/below-knee-prosthetic.png";
-import upperLimbProsthesis from "@/assets/upper-limb-prosthesis.png";
-import partialCosmeticProsthesis from "@/assets/partial-cosmetic-prosthesis.png";
+import aboveKneeProsthesis from "@/assets/above-knee-prosthesis.jpg";
+import belowKneeProsthesis from "@/assets/below-knee-prosthesis.jpg";
+import upperLimbProsthesis from "@/assets/upper-limb-prosthesis.jpg";
+import partialCosmeticProsthesis from "@/assets/partial-cosmetic-prosthesis.jpg";
 
 const ProstheticSolutions = () => {
   const products = [
@@ -17,7 +19,7 @@ const ProstheticSolutions = () => {
       title: "Above Knee Prosthesis",
       tagline: "Advanced mobility for above-knee amputees",
       description: "Our above-knee prosthetics feature advanced microprocessor-controlled knee joints that provide natural walking patterns, stability on uneven terrain, and smooth transitions between activities.",
-      image: aboveKneeProsthetic,
+      image: aboveKneeProsthesis,
       whoIsItFor: [
         "Individuals with above-knee (transfemoral) amputation",
         "Those seeking active lifestyle restoration",
@@ -52,7 +54,7 @@ const ProstheticSolutions = () => {
       title: "Below Knee Prosthesis",
       tagline: "Lightweight comfort for active living",
       description: "Designed for below-knee amputees, our prosthetics offer exceptional comfort with lightweight construction and energy-return technology for an active lifestyle.",
-      image: belowKneeProsthetic,
+      image: belowKneeProsthesis,
       whoIsItFor: [
         "Individuals with below-knee (transtibial) amputation",
         "Active individuals and athletes",
@@ -156,6 +158,7 @@ const ProstheticSolutions = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <PageLoader minDuration={500} />
       <Header />
 
       {/* Hero Section */}
@@ -207,10 +210,12 @@ const ProstheticSolutions = () => {
                 </div>
                 
                 <div className="order-1 lg:order-2">
-                  <img
+                  <AnimatedImage
                     src={product.image}
                     alt={product.title}
                     className="w-full max-w-md mx-auto rounded-2xl shadow-xl bg-white p-4"
+                    animation={productIndex % 2 === 0 ? "slide-right" : "slide-left"}
+                    containerClassName="flex justify-center"
                   />
                 </div>
               </div>

@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import PageLoader from "@/components/PageLoader";
+import AnimatedImage from "@/components/AnimatedImage";
 
-import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.png";
-import spinalOrthosis from "@/assets/spinal-orthosis.png";
-import customOrthoticSupports from "@/assets/custom-orthotic-supports.png";
+import kneeBraces from "@/assets/knee-braces.jpg";
+import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.jpg";
+import spinalOrthosis from "@/assets/spinal-orthosis.jpg";
 
 const OrthoticSolutions = () => {
   const products = [
@@ -16,7 +18,7 @@ const OrthoticSolutions = () => {
       title: "Knee Braces",
       tagline: "Support, stability, and pain relief",
       description: "Comprehensive range of knee braces designed for ligament injuries, arthritis management, post-surgical recovery, and sports activities. Custom-fitted for maximum support and comfort.",
-      image: spinalOrthosis,
+      image: kneeBraces,
       whoIsItFor: [
         "ACL/PCL/MCL injury patients",
         "Arthritis and joint pain sufferers",
@@ -124,7 +126,7 @@ const OrthoticSolutions = () => {
       title: "Custom Orthotic Supports",
       tagline: "Tailored solutions for unique needs",
       description: "Specialized custom orthotic supports for various conditions including wrist splints, elbow braces, and other supportive devices. Each solution is individually crafted for your specific needs.",
-      image: customOrthoticSupports,
+      image: kneeBraces,
       whoIsItFor: [
         "Carpal tunnel syndrome patients",
         "Tennis/golfer's elbow patients",
@@ -159,6 +161,7 @@ const OrthoticSolutions = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <PageLoader minDuration={500} />
       <Header />
 
       {/* Hero Section */}
@@ -209,10 +212,12 @@ const OrthoticSolutions = () => {
                 </div>
                 
                 <div className="order-1 lg:order-2">
-                  <img
+                  <AnimatedImage
                     src={product.image}
                     alt={product.title}
                     className="w-full max-w-md mx-auto rounded-2xl shadow-xl bg-white p-4"
+                    animation={productIndex % 2 === 0 ? "slide-right" : "slide-left"}
+                    containerClassName="flex justify-center"
                   />
                 </div>
               </div>

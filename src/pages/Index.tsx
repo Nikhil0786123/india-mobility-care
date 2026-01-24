@@ -7,12 +7,14 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SolutionCard from "@/components/SolutionCard";
 import TrustItem from "@/components/TrustItem";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import PageLoader from "@/components/PageLoader";
+import AnimatedImage from "@/components/AnimatedImage";
 
 import heroPatient from "@/assets/hero-patient.jpg";
-import belowKneeProsthetic from "@/assets/below-knee-prosthetic.png";
-import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.png";
-import growthAdjustable from "@/assets/growth-adjustable-solutions.png";
-import therapeuticInsoles from "@/assets/therapeutic-insoles.png";
+import belowKneeProsthesis from "@/assets/below-knee-prosthesis.jpg";
+import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.jpg";
+import childFriendlyProsthetics from "@/assets/child-friendly-prosthetics.png";
+import therapeuticInsoles from "@/assets/therapeutic-insoles.jpg";
 import before1 from "@/assets/before-1.jpg";
 import after1 from "@/assets/after-1.jpg";
 import before2 from "@/assets/before-2.jpg";
@@ -27,7 +29,7 @@ const Index = () => {
       title: "Prosthetic Limbs",
       description:
         "Advanced artificial limbs designed for comfort and natural movement, customized for Indian body types and lifestyle.",
-      image: belowKneeProsthetic,
+      image: belowKneeProsthesis,
       link: "/solutions/prosthetics",
     },
     {
@@ -43,7 +45,7 @@ const Index = () => {
       title: "Pediatric Solutions",
       description:
         "Child-friendly prosthetics with growth-adjustable designs that grow with your child.",
-      image: growthAdjustable,
+      image: childFriendlyProsthetics,
       link: "/solutions/pediatric",
     },
     {
@@ -116,6 +118,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <PageLoader minDuration={600} />
       <Header />
 
       {/* Hero Section */}
@@ -125,7 +128,8 @@ const Index = () => {
           <img
             src={heroPatient}
             alt="Happy patient with prosthetic limb"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-scale-in"
+            style={{ animationDuration: '1.2s' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
         </div>
@@ -189,10 +193,12 @@ const Index = () => {
               {/* Glow effect behind logo */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 blur-3xl scale-110 rounded-full"></div>
               
-              <img 
+              <AnimatedImage 
                 src={logo} 
                 alt="P&O Robotics Artificial Limbs Solutions" 
                 className="relative h-40 sm:h-52 md:h-64 lg:h-80 xl:h-96 w-auto object-contain drop-shadow-xl"
+                animation="zoom"
+                hoverEffect={false}
               />
             </div>
             
@@ -366,10 +372,11 @@ const Index = () => {
             <ScrollReveal>
               <div className="relative max-w-md mx-auto lg:max-w-none">
                 <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-xl bg-gradient-to-b from-muted to-primary/10">
-                  <img
+                  <AnimatedImage
                     src={drAbhinav}
                     alt="Dr. Abhinav Bhatnagar"
                     className="w-full aspect-[4/5] object-cover object-top"
+                    animation="fade-up"
                   />
                 </div>
                 <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 bg-primary text-white p-4 md:p-5 rounded-xl md:rounded-2xl shadow-xl">
@@ -393,14 +400,10 @@ const Index = () => {
                 <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
                   With over 15 years of experience, Dr. Bhatnagar has transformed thousands of 
                   lives across India. His patient-centered approach combines cutting-edge technology 
-                  with compassionate care.
+                  with compassionate care to deliver the best possible outcomes.
                 </p>
-                <blockquote className="border-l-4 border-primary pl-4 italic text-foreground mb-8 text-left">
-                  "My goal is not just to fit a prosthetic limb, but to restore hope, independence, 
-                  and the confidence to live life fully."
-                </blockquote>
-                <Button variant="default" size="lg" className="w-full sm:w-auto" asChild>
-                  <Link to="/doctor">Meet Our Doctor <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+                  <Link to="/doctor">Learn More About Dr. Bhatnagar</Link>
                 </Button>
               </div>
             </ScrollReveal>
@@ -409,37 +412,30 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-accent rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-        </div>
-        <div className="container-custom px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-3xl mx-auto text-center">
-            <ScrollReveal>
-              <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-6">
-                Your Journey Towards Better Mobility Starts Here
-              </h2>
-              <p className="text-white/90 text-base md:text-lg mb-8">
-                Take the first step towards regaining your independence. Our team of
-                experts is ready to help you find the perfect solution.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <Button variant="cta" size="xl" className="w-full sm:w-auto" asChild>
-                  <Link to="/contact">Book Your Consultation</Link>
-                </Button>
-                <Button variant="heroOutline" size="xl" className="w-full sm:w-auto group" asChild>
-                  <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp Us
-                  </a>
-                </Button>
-              </div>
-            </ScrollReveal>
-          </div>
+      <section className="py-16 md:py-24 bg-primary">
+        <div className="container-custom px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-primary-foreground mb-6">
+              Ready to Take the First Step?
+            </h2>
+            <p className="text-primary-foreground/80 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+              Book a free consultation with our experts and discover how we can help
+              restore your mobility and independence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button variant="cta" size="xl" className="w-full sm:w-auto" asChild>
+                <Link to="/contact">Book Free Consultation</Link>
+              </Button>
+              <Button variant="heroOutline" size="lg" className="w-full sm:w-auto" asChild>
+                <Link to="/solutions" className="flex items-center gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  Chat on WhatsApp
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
-
 
       <Footer />
     </div>
