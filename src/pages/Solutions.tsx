@@ -3,11 +3,18 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import PageLoader from "@/components/PageLoader";
+import AnimatedImage from "@/components/AnimatedImage";
 
-import prostheticLeg from "@/assets/prosthetic-leg.jpg";
-import orthoticBrace from "@/assets/orthotic-brace.jpg";
-import pediatricProsthetic from "@/assets/pediatric-prosthetic.jpg";
-import diabeticFootcare from "@/assets/diabetic-footcare.jpg";
+import aboveKneeProsthesis from "@/assets/above-knee-prosthesis.jpg";
+import belowKneeProsthesis from "@/assets/below-knee-prosthesis.jpg";
+import upperLimbProsthesis from "@/assets/upper-limb-prosthesis.jpg";
+import partialCosmeticProsthesis from "@/assets/partial-cosmetic-prosthesis.jpg";
+import kneeBraces from "@/assets/knee-braces.jpg";
+import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.jpg";
+import spinalOrthosis from "@/assets/spinal-orthosis.jpg";
+import childFriendlyProsthetics from "@/assets/child-friendly-prosthetics.png";
+import therapeuticInsoles from "@/assets/therapeutic-insoles.jpg";
 
 const Solutions = () => {
   const prostheticSolutions = [
@@ -15,25 +22,25 @@ const Solutions = () => {
       title: "Above Knee Prosthesis",
       description:
         "Advanced above-knee prosthetic solutions featuring microprocessor-controlled knee joints for natural walking patterns. Designed for stability, comfort, and durability suited to Indian conditions.",
-      image: prostheticLeg,
+      image: aboveKneeProsthesis,
     },
     {
       title: "Below Knee Prosthesis",
       description:
         "Lightweight and comfortable below-knee prosthetics with energy-return feet that allow for active lifestyles. Custom socket design ensures perfect fit and all-day comfort.",
-      image: prostheticLeg,
+      image: belowKneeProsthesis,
     },
     {
       title: "Upper Limb Prosthesis",
       description:
         "Functional and cosmetic upper limb prosthetics ranging from body-powered to myoelectric options. Designed to restore hand function and confidence.",
-      image: prostheticLeg,
+      image: upperLimbProsthesis,
     },
     {
       title: "Cosmetic Prosthesis",
       description:
         "Highly realistic cosmetic prosthetics that match your skin tone and appearance. Perfect for those seeking natural-looking restoration.",
-      image: prostheticLeg,
+      image: partialCosmeticProsthesis,
     },
   ];
 
@@ -42,19 +49,19 @@ const Solutions = () => {
       title: "Knee Braces",
       description:
         "Supportive knee braces for various conditions including ligament injuries, arthritis, and post-surgical recovery. Adjustable designs for optimal support and mobility.",
-      image: orthoticBrace,
+      image: kneeBraces,
     },
     {
       title: "Ankle Foot Orthosis (AFO)",
       description:
         "Custom-molded AFOs for drop foot, stroke recovery, and other conditions affecting ankle and foot function. Lightweight materials for comfortable daily wear.",
-      image: orthoticBrace,
+      image: ankleFootOrthosis,
     },
     {
       title: "Spinal Supports",
       description:
         "Back braces and spinal orthoses for posture correction, scoliosis management, and post-injury support. Designed for comfort during extended wear.",
-      image: orthoticBrace,
+      image: spinalOrthosis,
     },
   ];
 
@@ -63,13 +70,13 @@ const Solutions = () => {
       title: "Child-Friendly Prosthetics",
       description:
         "Prosthetic limbs designed specifically for children with colorful, fun designs that kids love. Lightweight and durable for active play.",
-      image: pediatricProsthetic,
+      image: childFriendlyProsthetics,
     },
     {
       title: "Growth-Adjustable Solutions",
       description:
         "Modular prosthetics that can be adjusted as your child grows, reducing the need for frequent replacements while ensuring proper fit and function.",
-      image: pediatricProsthetic,
+      image: childFriendlyProsthetics,
     },
   ];
 
@@ -78,13 +85,13 @@ const Solutions = () => {
       title: "Custom Diabetic Footwear",
       description:
         "Specially designed shoes that accommodate diabetic foot conditions, reducing pressure points and preventing ulcers. Available in various styles.",
-      image: diabeticFootcare,
+      image: therapeuticInsoles,
     },
     {
       title: "Therapeutic Insoles",
       description:
         "Custom-molded insoles that provide cushioning and support for diabetic feet. Helps distribute pressure evenly and prevent complications.",
-      image: diabeticFootcare,
+      image: therapeuticInsoles,
     },
   ];
 
@@ -115,11 +122,13 @@ const Solutions = () => {
             <ScrollReveal key={solution.title} delay={index * 100}>
               <div className="bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 group">
                 <div className="grid md:grid-cols-5 h-full">
-                  <div className="md:col-span-2 h-48 md:h-full">
-                    <img
+                  <div className="md:col-span-2 h-48 md:h-full overflow-hidden">
+                    <AnimatedImage
                       src={solution.image}
                       alt={solution.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover"
+                      animation="fade-in"
+                      delay={index * 50}
                     />
                   </div>
                   <div className="md:col-span-3 p-6 flex flex-col justify-center">
@@ -144,6 +153,7 @@ const Solutions = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <PageLoader minDuration={500} />
       <Header />
 
       {/* Hero Section */}
