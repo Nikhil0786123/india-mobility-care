@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
 
-import aboveKneeProsthesis from "@/assets/above-knee-prosthesis.jpg";
+import prostheticLegSilicone from "@/assets/prosthetic-leg-silicone.png";
 import belowKneeProsthesis from "@/assets/below-knee-prosthesis.jpg";
 import upperLimbProsthesis from "@/assets/upper-limb-prosthesis.jpg";
 import partialCosmeticProsthesis from "@/assets/partial-cosmetic-prosthesis.jpg";
@@ -18,21 +18,21 @@ const ProstheticSolutions = () => {
       id: "above-knee",
       title: "Above Knee Prosthesis",
       tagline: "Advanced mobility for above-knee amputees",
-      description: "Our above-knee prosthetics feature advanced microprocessor-controlled knee joints that provide natural walking patterns, stability on uneven terrain, and smooth transitions between activities.",
-      image: aboveKneeProsthesis,
+      description: "Our above-knee prosthetics are designed with advanced microprocessor-controlled knee joints that provide natural walking patterns, superior stability on varied terrain, and seamless transitions between daily activities. Crafted specifically for Indian patients, these prosthetics account for local climate conditions, lifestyle requirements, and body types. The silicone liners ensure all-day comfort while the lightweight carbon fiber components reduce fatigue during extended use.",
+      image: prostheticLegSilicone,
       whoIsItFor: [
-        "Individuals with above-knee (transfemoral) amputation",
-        "Those seeking active lifestyle restoration",
-        "Patients requiring high stability and control",
-        "Both traumatic and medical amputation patients",
+        "Individuals with above-knee (transfemoral) amputation due to trauma, diabetes, or vascular conditions",
+        "Active patients seeking to return to sports, work, or daily activities",
+        "Patients requiring high stability and confidence while walking",
+        "Both young adults and elderly patients needing reliable mobility solutions",
       ],
       benefits: [
-        "Natural walking gait and movement",
-        "Microprocessor-controlled knee for safety",
-        "Energy-efficient design reduces fatigue",
-        "Suitable for varied terrain and activities",
-        "Custom socket for Indian body types",
-        "Waterproof options available",
+        "Natural walking gait that mimics biological movement",
+        "Microprocessor-controlled knee for enhanced safety on stairs and slopes",
+        "Energy-efficient design that reduces fatigue during long walks",
+        "Suitable for Indian terrain including uneven roads and wet surfaces",
+        "Custom socket designed for Indian body types and comfort",
+        "Waterproof and dust-resistant options for Indian climate",
       ],
       technology: [
         "Microprocessor knee units",
@@ -41,33 +41,33 @@ const ProstheticSolutions = () => {
         "Silicone liners for comfort",
       ],
       fittingProcess: [
-        "Initial consultation and assessment",
-        "Precise measurement and casting",
-        "Custom socket fabrication",
-        "Fitting and alignment",
-        "Gait training and rehabilitation",
-        "Follow-up adjustments",
+        "Initial consultation and comprehensive assessment",
+        "Precise measurement using 3D scanning technology",
+        "Custom socket fabrication in our workshop",
+        "Fitting, alignment, and fine-tuning",
+        "Gait training and rehabilitation support",
+        "Lifetime follow-up adjustments and care",
       ],
     },
     {
       id: "below-knee",
       title: "Below Knee Prosthesis",
       tagline: "Lightweight comfort for active living",
-      description: "Designed for below-knee amputees, our prosthetics offer exceptional comfort with lightweight construction and energy-return technology for an active lifestyle.",
+      description: "Designed specifically for below-knee amputees, our prosthetics offer exceptional comfort through ultra-lightweight construction combined with advanced energy-return technology. These prosthetics are ideal for Indian patients who lead active lifestyles, whether working in offices, factories, or agricultural settings. The breathable liners are designed to handle India's warm climate, while the durable components withstand daily wear and tear.",
       image: belowKneeProsthesis,
       whoIsItFor: [
         "Individuals with below-knee (transtibial) amputation",
-        "Active individuals and athletes",
-        "Diabetic amputation patients",
-        "Working professionals seeking mobility",
+        "Active professionals, athletes, and sports enthusiasts",
+        "Diabetic patients who have undergone partial leg amputation",
+        "Working professionals in all sectors seeking restored mobility",
       ],
       benefits: [
-        "Ultra-lightweight design",
-        "Energy-returning foot for efficient walking",
-        "All-day comfort with custom socket",
-        "Quick donning and doffing",
-        "Suitable for Indian climate",
-        "Activity-specific options available",
+        "Ultra-lightweight design for all-day comfort",
+        "Energy-returning foot technology for efficient walking",
+        "Custom socket with breathable materials for Indian climate",
+        "Quick donning and doffing for convenience",
+        "Activity-specific options for sports, work, and daily life",
+        "Affordable maintenance with locally available components",
       ],
       technology: [
         "Dynamic response feet",
@@ -76,33 +76,33 @@ const ProstheticSolutions = () => {
         "Breathable liners",
       ],
       fittingProcess: [
-        "Comprehensive evaluation",
-        "Residual limb assessment",
-        "Custom socket design",
-        "Component selection",
-        "Final fitting and training",
-        "Ongoing support",
+        "Comprehensive evaluation and lifestyle assessment",
+        "Residual limb measurement and casting",
+        "Custom socket design and fabrication",
+        "Component selection based on activity level",
+        "Final fitting and walking training",
+        "Ongoing support and adjustments",
       ],
     },
     {
       id: "upper-limb",
       title: "Upper Limb Prosthesis",
       tagline: "Restore hand function and independence",
-      description: "Our upper limb prosthetics range from body-powered to advanced myoelectric options, designed to restore hand function and enhance daily living activities.",
+      description: "Our upper limb prosthetics range from simple body-powered devices to advanced myoelectric options that respond to muscle signals. These prosthetics are designed to restore hand and arm function, enabling patients to perform daily tasks independently. Whether you need a prosthetic for work, household activities, or personal care, we offer solutions that match Indian lifestyle needs and occupational requirements.",
       image: upperLimbProsthesis,
       whoIsItFor: [
-        "Individuals with arm or hand amputation",
-        "Those needing functional restoration",
-        "Patients seeking cosmetic solutions",
-        "Working professionals",
+        "Individuals with arm, hand, or finger amputation at any level",
+        "Patients seeking functional restoration for work and daily activities",
+        "Those preferring cosmetic solutions for social confidence",
+        "Working professionals requiring specific grip functions",
       ],
       benefits: [
-        "Multiple grip patterns",
-        "Intuitive control systems",
-        "Lightweight and durable",
-        "Customizable appearance",
-        "Activity-specific options",
-        "Improved independence",
+        "Multiple grip patterns for various tasks",
+        "Intuitive myoelectric control systems",
+        "Lightweight construction for all-day wear",
+        "Customizable cosmetic appearance matching skin tone",
+        "Activity-specific terminal devices available",
+        "Improved independence in daily living",
       ],
       technology: [
         "Myoelectric control",
@@ -111,47 +111,47 @@ const ProstheticSolutions = () => {
         "3D printed components",
       ],
       fittingProcess: [
-        "Functional assessment",
-        "Control site evaluation",
-        "Socket fabrication",
-        "Device training",
-        "Occupational therapy",
-        "Regular follow-ups",
+        "Functional needs assessment",
+        "Muscle control site evaluation",
+        "Socket fabrication and fitting",
+        "Device operation training",
+        "Occupational therapy integration",
+        "Regular follow-ups and adjustments",
       ],
     },
     {
       id: "cosmetic",
       title: "Partial & Cosmetic Prosthesis",
-      tagline: "Natural-looking restoration",
-      description: "Highly realistic cosmetic prosthetics that match your skin tone, texture, and appearance perfectly. Ideal for those seeking natural-looking restoration.",
+      tagline: "Natural-looking restoration for confidence",
+      description: "Our cosmetic prosthetics are crafted with medical-grade silicone to achieve remarkably realistic appearance. Each prosthetic is custom-made to match your exact skin tone, texture, and features including nails and veins. Ideal for patients who prioritize natural appearance, these prosthetics restore confidence in social and professional settings. They are particularly suitable for Indian patients, with specialized color matching for diverse Indian skin tones.",
       image: partialCosmeticProsthesis,
       whoIsItFor: [
-        "Partial hand or finger amputees",
-        "Those prioritizing cosmetic appearance",
-        "Individuals with partial foot amputation",
-        "Patients seeking psychological confidence",
+        "Individuals with partial hand or finger amputations",
+        "Patients prioritizing cosmetic appearance and social confidence",
+        "Those with partial foot or toe amputations",
+        "Patients seeking psychological well-being through restored appearance",
       ],
       benefits: [
-        "Highly realistic appearance",
-        "Custom skin tone matching",
-        "Nail and vein details",
-        "Lightweight and comfortable",
-        "Weather resistant",
-        "Boosts confidence",
+        "Highly realistic appearance indistinguishable from natural limbs",
+        "Custom skin tone matching for all Indian complexions",
+        "Detailed nail, vein, and texture replication",
+        "Lightweight and comfortable for all-day wear",
+        "Weather-resistant and durable for Indian climate",
+        "Significant boost to self-confidence and mental well-being",
       ],
       technology: [
         "Medical-grade silicone",
-        "Color matching systems",
+        "Advanced color matching systems",
         "Custom molding techniques",
-        "Durable materials",
+        "Durable weather-resistant materials",
       ],
       fittingProcess: [
-        "Detailed assessment",
-        "Color and texture matching",
-        "Impression taking",
-        "Custom fabrication",
-        "Final fitting",
-        "Care instructions",
+        "Detailed assessment and expectations discussion",
+        "Precise color and texture matching session",
+        "Impression taking of affected and unaffected areas",
+        "Custom fabrication by skilled technicians",
+        "Final fitting and appearance adjustments",
+        "Care instructions and maintenance guidance",
       ],
     },
   ];
@@ -179,7 +179,7 @@ const ProstheticSolutions = () => {
             <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: "100ms" }}>
               Advanced artificial limbs designed for natural movement, comfort, and durability. 
               Each prosthetic is custom-made for Indian patients, considering body type, lifestyle, 
-              and climate conditions.
+              and climate conditions. Our solutions restore mobility and independence for patients across India.
             </p>
           </div>
         </div>
@@ -329,7 +329,7 @@ const ProstheticSolutions = () => {
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
               Our experts will assess your needs and recommend the perfect prosthetic solution 
-              tailored to your lifestyle.
+              tailored to your lifestyle and requirements.
             </p>
             <Button variant="cta" size="xl" asChild>
               <Link to="/contact">Book Free Consultation</Link>

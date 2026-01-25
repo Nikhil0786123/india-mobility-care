@@ -11,7 +11,7 @@ import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
 
 import heroPatient from "@/assets/hero-patient.jpg";
-import belowKneeProsthesis from "@/assets/below-knee-prosthesis.jpg";
+import prostheticLegSilicone from "@/assets/prosthetic-leg-silicone.png";
 import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.jpg";
 import childFriendlyProsthetics from "@/assets/child-friendly-prosthetics.png";
 import therapeuticInsoles from "@/assets/therapeutic-insoles.jpg";
@@ -29,7 +29,7 @@ const Index = () => {
       title: "Prosthetic Limbs",
       description:
         "Advanced artificial limbs designed for comfort and natural movement, customized for Indian body types and lifestyle.",
-      image: belowKneeProsthesis,
+      image: prostheticLegSilicone,
       link: "/solutions/prosthetics",
     },
     {
@@ -121,8 +121,92 @@ const Index = () => {
       <PageLoader minDuration={600} />
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-24 sm:pt-28 md:pt-32">
+      {/* Brand Hero Section - TOP OF PAGE */}
+      <section className="pt-28 sm:pt-32 md:pt-36 pb-16 md:pb-24 bg-gradient-to-b from-sky-50 via-white to-teal-50/30 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-10 left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container-custom px-4 sm:px-6 lg:px-8 relative">
+          <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+            {/* Premium Large Logo with Enhanced Visibility */}
+            <div className="relative mb-8 md:mb-12">
+              {/* Glow effect behind logo */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-accent/15 to-primary/15 blur-3xl scale-125 rounded-full"></div>
+              
+              <AnimatedImage 
+                src={logo} 
+                alt="P&O ROBOTICS Artificial Limbs Solutions" 
+                className="relative h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[28rem] w-auto object-contain drop-shadow-2xl"
+                animation="zoom"
+                hoverEffect={false}
+              />
+            </div>
+            
+            {/* Organization Name - Bold & Prominent */}
+            <h1 className="font-outfit font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary mb-3 tracking-tight drop-shadow-sm">
+              P&O ROBOTICS
+            </h1>
+            <h2 className="font-outfit font-semibold text-xl sm:text-2xl md:text-3xl text-foreground/80 uppercase tracking-widest mb-8">
+              Artificial Limbs Solutions
+            </h2>
+            
+            {/* Decorative divider */}
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px w-20 bg-gradient-to-r from-transparent to-primary/50"></div>
+              <div className="w-4 h-4 rounded-full bg-primary/60 animate-pulse"></div>
+              <div className="h-px w-20 bg-gradient-to-l from-transparent to-primary/50"></div>
+            </div>
+            
+            {/* About Heading */}
+            <h3 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-foreground mb-6">
+              About Us
+            </h3>
+            
+            {/* About Description */}
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mb-10">
+              P&O ROBOTICS Artificial Limbs Solutions is dedicated to improving mobility and quality of life through advanced prosthetic and orthotic care. We provide customized artificial limb and support solutions designed specifically for Indian patients, combining medical expertise, modern technology, and compassionate care. Our focus is on comfort, functionality, and long-term support for every patient.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="cta" size="lg" className="w-full sm:w-auto" asChild>
+                <Link to="/contact">Book Free Consultation</Link>
+              </Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+                <Link to="/solutions">Explore Our Solutions</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges Strip */}
+      <section className="bg-white border-y border-border py-6 md:py-8">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            {[
+              { icon: <Users className="w-5 h-5" />, text: "Indian Patient Focused" },
+              { icon: <Wrench className="w-5 h-5" />, text: "Custom Prosthetic Solutions" },
+              { icon: <Award className="w-5 h-5" />, text: "Expert Medical Care" },
+              { icon: <HeartHandshake className="w-5 h-5" />, text: "Consultation Based" },
+            ].map((badge) => (
+              <div key={badge.text} className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  {badge.icon}
+                </div>
+                <span className="font-medium text-xs sm:text-sm text-foreground">{badge.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Hero Image Section */}
+      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
         {/* Background Image with Better Overlay */}
         <div className="absolute inset-0">
           <img
@@ -139,14 +223,14 @@ const Index = () => {
           <div className="max-w-2xl">
             <div className="mb-4">
               <span className="inline-block bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
-                P&O Robotics Artificial Limbs Solutions
+                P&O ROBOTICS Artificial Limbs Solutions
               </span>
             </div>
-            <h1 className="font-outfit font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h2 className="font-outfit font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Trusted Prosthetic &
               <br />
               <span className="text-accent">Orthotic Care in India</span>
-            </h1>
+            </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-xl">
               Advanced Artificial Limb & Orthotic Solutions Designed for Indian Patients
             </p>
@@ -174,79 +258,6 @@ const Index = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Reinforcement Section - Premium Logo Display */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white via-sky-50/30 to-teal-50/20 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-60 h-60 bg-accent/10 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container-custom px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            {/* Premium Large Logo with Enhanced Visibility */}
-            <div className="relative mb-8 md:mb-10">
-              {/* Glow effect behind logo */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 blur-3xl scale-110 rounded-full"></div>
-              
-              <AnimatedImage 
-                src={logo} 
-                alt="P&O Robotics Artificial Limbs Solutions" 
-                className="relative h-40 sm:h-52 md:h-64 lg:h-80 xl:h-96 w-auto object-contain drop-shadow-xl"
-                animation="zoom"
-                hoverEffect={false}
-              />
-            </div>
-            
-            {/* Organization Name - Bold & Prominent */}
-            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary mb-4 tracking-tight drop-shadow-sm">
-              P&O ROBOTICS
-            </h2>
-            <h3 className="font-outfit font-semibold text-lg sm:text-xl md:text-2xl text-foreground/80 uppercase tracking-widest mb-8">
-              Artificial Limbs Solutions
-            </h3>
-            
-            {/* Decorative divider */}
-            <div className="flex items-center gap-4 mb-8">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/50"></div>
-              <div className="w-3 h-3 rounded-full bg-primary/60"></div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/50"></div>
-            </div>
-            
-            {/* About Heading */}
-            <h4 className="font-outfit font-bold text-xl sm:text-2xl md:text-3xl text-foreground mb-6">
-              About Us
-            </h4>
-            
-            {/* About Description */}
-            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
-              P&O Robotics Artificial Limbs Solutions is dedicated to improving mobility and quality of life through advanced prosthetic and orthotic care. We provide customized artificial limb and support solutions designed specifically for Indian patients, combining medical expertise, modern technology, and compassionate care. Our focus is on comfort, functionality, and long-term support for every patient.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Badges Strip */}
-      <section className="bg-white border-y border-border py-6 md:py-8">
-        <div className="container-custom px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {[
-              { icon: <Users className="w-5 h-5" />, text: "Indian Patient Focused" },
-              { icon: <Wrench className="w-5 h-5" />, text: "Custom Prosthetic Solutions" },
-              { icon: <Award className="w-5 h-5" />, text: "Expert Medical Care" },
-              { icon: <HeartHandshake className="w-5 h-5" />, text: "Consultation Based" },
-            ].map((badge) => (
-              <div key={badge.text} className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                  {badge.icon}
-                </div>
-                <span className="font-medium text-xs sm:text-sm text-foreground">{badge.text}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -296,7 +307,7 @@ const Index = () => {
                 Why Patients Trust Us
               </div>
               <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-foreground mb-4">
-                Why Choose P&O Robotics?
+                Why Choose P&O ROBOTICS?
               </h2>
               <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
                 We are committed to providing the highest quality care with a
@@ -398,12 +409,13 @@ const Index = () => {
                   Prosthetics & Orthotics Specialist
                 </p>
                 <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                  With over 15 years of experience, Dr. Bhatnagar has transformed thousands of 
-                  lives across India. His patient-centered approach combines cutting-edge technology 
-                  with compassionate care to deliver the best possible outcomes.
+                  With over 15 years of experience, Dr. Abhinav Bhatnagar has helped
+                  thousands of patients regain mobility and independence. His
+                  patient-centered approach and expertise in advanced prosthetic
+                  technology have made him one of the most trusted specialists in India.
                 </p>
-                <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
-                  <Link to="/doctor">Learn More About Dr. Bhatnagar</Link>
+                <Button variant="default" size="lg" className="w-full sm:w-auto" asChild>
+                  <Link to="/doctor">Learn More About Dr. Bhatnagar <ArrowRight className="w-4 h-4 ml-2" /></Link>
                 </Button>
               </div>
             </ScrollReveal>
@@ -415,23 +427,24 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-primary">
         <div className="container-custom px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-primary-foreground mb-6">
+            <h2 className="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-6">
               Ready to Take the First Step?
             </h2>
-            <p className="text-primary-foreground/80 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-white/80 text-base md:text-lg mb-8 max-w-2xl mx-auto">
               Book a free consultation with our experts and discover how we can help
-              restore your mobility and independence.
+              you regain your mobility and independence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button variant="cta" size="xl" className="w-full sm:w-auto" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="cta" size="lg" className="w-full sm:w-auto" asChild>
                 <Link to="/contact">Book Free Consultation</Link>
               </Button>
-              <Button variant="heroOutline" size="lg" className="w-full sm:w-auto" asChild>
-                <Link to="/solutions" className="flex items-center gap-2">
-                  <MessageCircle className="w-4 h-4" />
-                  Chat on WhatsApp
-                </Link>
-              </Button>
+              <a
+                href="tel:+919717661811"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-medium transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                +91 97176 61811
+              </a>
             </div>
           </ScrollReveal>
         </div>
