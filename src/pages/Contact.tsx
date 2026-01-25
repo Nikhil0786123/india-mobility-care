@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -77,6 +78,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="Contact P&O ROBOTICS | Book Free Prosthetics Consultation Delhi"
+        description="Contact P&O ROBOTICS for artificial limbs and prosthetic solutions in Delhi. Book free consultation at our Begumpur center. Call +91-97176-61811 or WhatsApp us."
+        keywords="contact P&O ROBOTICS, prosthetics consultation Delhi, artificial limbs Delhi, book appointment prosthetics, Begumpur prosthetic center"
+        canonicalUrl="/contact"
+      />
       <Header />
 
       {/* Hero Section */}

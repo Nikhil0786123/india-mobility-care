@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 import doctorPatient from "@/assets/doctor-patient.jpg";
 import workshop from "@/assets/workshop.jpg";
@@ -47,6 +48,12 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="About P&O ROBOTICS | Leading Prosthetics Provider in India"
+        description="Learn about P&O ROBOTICS Artificial Limbs Solutions - 15+ years of providing advanced prosthetic and orthotic care to patients across India. Trusted rehabilitation services in Delhi."
+        keywords="about P&O ROBOTICS, artificial limbs company India, prosthetics provider Delhi, orthotic solutions India, rehabilitation center"
+        canonicalUrl="/about"
+      />
       <Header />
 
       {/* Hero Section */}
