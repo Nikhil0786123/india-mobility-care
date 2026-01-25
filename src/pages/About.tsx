@@ -57,8 +57,8 @@ const About = () => {
         </div>
         <div className="container-custom section-padding !pt-0 relative">
           <div className="max-w-3xl">
-            <h1 className="font-outfit font-bold text-4xl md:text-5xl text-foreground mb-6 animate-fade-up">
-              About <span className="text-primary">P&O ROBOTICS</span>
+      <h1 className="font-outfit font-bold text-4xl md:text-5xl text-foreground mb-6 animate-fade-up">
+              About <span className="text-primary">P&O ROBOTICS ARTIFICIAL LIMBS SOLUTIONS</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: "100ms" }}>
               For over 15 years, we have been dedicated to restoring mobility and
@@ -135,7 +135,7 @@ const About = () => {
                 Our Core Values
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                These principles guide everything we do at P&O ROBOTICS.
+                These principles guide everything we do at P&O ROBOTICS Artificial Limbs Solutions.
               </p>
             </div>
           </ScrollReveal>

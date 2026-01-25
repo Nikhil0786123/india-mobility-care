@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex flex-col items-start gap-3">
               <img 
                 src={logo} 
-                alt="P&O Robotics Artificial Limbs Solutions" 
+                alt="P&O ROBOTICS Artificial Limbs Solutions"
                 className="h-24 w-auto object-contain bg-white rounded-xl p-3 shadow-lg"
               />
               <div className="flex flex-col">
