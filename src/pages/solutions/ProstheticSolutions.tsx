@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
 
+import aboveKneeProsthesis from "@/assets/above-knee-prosthesis-new.jpg";
 import prostheticLegSilicone from "@/assets/prosthetic-leg-silicone.png";
 import belowKneeProsthesis from "@/assets/below-knee-prosthesis.jpg";
 import upperLimbProsthesis from "@/assets/upper-limb-prosthesis.jpg";
@@ -19,7 +20,7 @@ const ProstheticSolutions = () => {
       title: "Above Knee Prosthesis",
       tagline: "Advanced mobility for above-knee amputees",
       description: "Our above-knee prosthetics are designed with advanced microprocessor-controlled knee joints that provide natural walking patterns, superior stability on varied terrain, and seamless transitions between daily activities. Crafted specifically for Indian patients, these prosthetics account for local climate conditions, lifestyle requirements, and body types. The silicone liners ensure all-day comfort while the lightweight carbon fiber components reduce fatigue during extended use.",
-      image: prostheticLegSilicone,
+      image: aboveKneeProsthesis,
       whoIsItFor: [
         "Individuals with above-knee (transfemoral) amputation due to trauma, diabetes, or vascular conditions",
         "Active patients seeking to return to sports, work, or daily activities",
@@ -47,6 +48,41 @@ const ProstheticSolutions = () => {
         "Fitting, alignment, and fine-tuning",
         "Gait training and rehabilitation support",
         "Lifetime follow-up adjustments and care",
+      ],
+    },
+    {
+      id: "silicone-prosthetic",
+      title: "Silicone Prosthetic Liner",
+      tagline: "Superior comfort with natural look and feel",
+      description: "Our premium silicone prosthetic liners provide the ultimate combination of comfort, durability, and natural appearance. Made from medical-grade silicone, these liners create a secure cushioned interface between the residual limb and prosthetic socket. The silicone material mimics natural skin texture and flexibility, ensuring all-day comfort even in India's warm and humid climate. Designed specifically for Indian patients, these liners offer excellent breathability and moisture management.",
+      image: prostheticLegSilicone,
+      whoIsItFor: [
+        "Prosthetic users seeking enhanced comfort and fit",
+        "Patients with sensitive residual limbs requiring cushioning",
+        "Active individuals needing secure suspension during movement",
+        "Those looking for natural skin-like appearance and feel",
+      ],
+      benefits: [
+        "Natural look and feel that mimics real skin texture",
+        "Superior cushioning for all-day comfort",
+        "Excellent moisture management for Indian climate",
+        "Secure suspension that prevents pistoning",
+        "Hypoallergenic material safe for sensitive skin",
+        "Durable construction for long-lasting performance",
+      ],
+      technology: [
+        "Medical-grade silicone",
+        "Moisture-wicking fabric backing",
+        "Pin or suction suspension options",
+        "Anatomical shaping",
+      ],
+      fittingProcess: [
+        "Residual limb assessment and measurement",
+        "Selection of appropriate liner type and size",
+        "Trial fitting and comfort evaluation",
+        "Custom modifications if needed",
+        "Training on proper donning and care",
+        "Regular follow-ups for optimal fit",
       ],
     },
     {
