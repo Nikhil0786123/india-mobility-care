@@ -9,6 +9,7 @@ import TrustItem from "@/components/TrustItem";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
+import SEOHead from "@/components/SEOHead";
 
 import heroPatient from "@/assets/hero-patient.jpg";
 import prostheticLegSilicone from "@/assets/prosthetic-leg-silicone.png";
@@ -118,6 +119,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="P&O ROBOTICS | Artificial Limbs & Prosthetic Solutions India"
+        description="P&O ROBOTICS provides advanced artificial limbs, prosthetic legs, and orthotic solutions in Delhi, India. Custom prosthetics for Indian patients. Book free consultation today."
+        keywords="artificial limbs India, prosthetic leg Delhi, prosthetic hand, artificial limbs in India, prosthetic solutions Delhi, rehabilitation prosthetics, below knee prosthesis, above knee prosthesis"
+        canonicalUrl="/"
+      />
       <PageLoader minDuration={600} />
       <Header />
 

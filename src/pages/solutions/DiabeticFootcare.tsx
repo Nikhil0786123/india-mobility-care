@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
+import SEOHead from "@/components/SEOHead";
 
 import therapeuticInsoles from "@/assets/therapeutic-insoles.jpg";
 
@@ -55,6 +56,12 @@ const DiabeticFootcare = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="Diabetic Foot Care India | Therapeutic Insoles & Footwear | P&O ROBOTICS"
+        description="Specialized diabetic foot care solutions in India - therapeutic insoles, custom diabetic footwear, and preventive care. Protect your feet with expert care in Delhi."
+        keywords="diabetic foot care India, therapeutic insoles Delhi, diabetic footwear, diabetic shoes India, foot ulcer prevention, custom insoles"
+        canonicalUrl="/solutions/diabetic-footcare"
+      />
       <PageLoader minDuration={500} />
       <Header />
 

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
+import SEOHead from "@/components/SEOHead";
 
 import childFriendlyProsthetics from "@/assets/child-friendly-prosthetics.png";
 
@@ -94,6 +95,12 @@ const PediatricSolutions = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="Pediatric Prosthetics India | Child Prosthetic Solutions | P&O ROBOTICS"
+        description="Specialized pediatric prosthetic solutions for children in India. Child-friendly, colorful, growth-adjustable prosthetics designed for active kids. Expert care in Delhi."
+        keywords="pediatric prosthetics India, child prosthetic leg, kids prosthetics Delhi, growth adjustable prosthetics, children artificial limbs"
+        canonicalUrl="/solutions/pediatric"
+      />
       <PageLoader minDuration={500} />
       <Header />
 

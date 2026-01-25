@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
+import SEOHead from "@/components/SEOHead";
 
 import aboveKneeProsthesis from "@/assets/above-knee-prosthesis.jpg";
 import belowKneeProsthesis from "@/assets/below-knee-prosthesis.jpg";
@@ -153,6 +154,12 @@ const Solutions = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="Prosthetic & Orthotic Solutions India | P&O ROBOTICS"
+        description="Explore our range of artificial limbs, prosthetic legs, orthotic braces, pediatric prosthetics, and diabetic foot care solutions. Custom-made for Indian patients."
+        keywords="prosthetic solutions India, orthotic braces Delhi, artificial limbs, prosthetic leg, knee braces, spinal orthosis, pediatric prosthetics, diabetic footcare"
+        canonicalUrl="/solutions"
+      />
       <PageLoader minDuration={500} />
       <Header />
 

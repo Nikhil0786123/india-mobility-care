@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 import drAbhinav from "@/assets/dr-abhinav.png";
 
@@ -60,6 +61,12 @@ const Doctor = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="Dr. Abhinav Bhatnagar | Prosthetics Expert Delhi | P&O ROBOTICS"
+        description="Meet Dr. Abhinav Bhatnagar, a leading prosthetist and orthotist with 15+ years experience. Expert in artificial limbs, prosthetic leg fitting, and rehabilitation in Delhi, India."
+        keywords="Dr. Abhinav Bhatnagar, prosthetics expert Delhi, orthotist India, artificial limbs specialist, prosthetic fitting doctor, rehabilitation expert"
+        canonicalUrl="/doctor"
+      />
       <Header />
 
       {/* Hero Section */}

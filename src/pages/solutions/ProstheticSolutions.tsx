@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
+import SEOHead from "@/components/SEOHead";
 
 import aboveKneeProsthesis from "@/assets/above-knee-prosthesis-new.jpg";
 import prostheticLegSilicone from "@/assets/prosthetic-leg-silicone.png";
@@ -194,6 +195,12 @@ const ProstheticSolutions = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="Prosthetic Limbs India | Artificial Legs & Arms | P&O ROBOTICS"
+        description="Advanced prosthetic solutions in India - above knee prosthesis, below knee prosthesis, upper limb prosthetics, silicone prosthetics. Custom artificial limbs for Indian patients in Delhi."
+        keywords="prosthetic leg India, above knee prosthesis, below knee prosthesis, artificial leg Delhi, upper limb prosthesis, prosthetic hand, silicone prosthetics India"
+        canonicalUrl="/solutions/prosthetics"
+      />
       <PageLoader minDuration={500} />
       <Header />
 

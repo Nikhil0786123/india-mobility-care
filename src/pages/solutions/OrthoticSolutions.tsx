@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageLoader from "@/components/PageLoader";
 import AnimatedImage from "@/components/AnimatedImage";
+import SEOHead from "@/components/SEOHead";
 
 import kneeBraces from "@/assets/knee-braces.jpg";
 import ankleFootOrthosis from "@/assets/ankle-foot-orthosis.jpg";
@@ -161,6 +162,12 @@ const OrthoticSolutions = () => {
 
   return (
     <div className="min-h-screen bg-background font-outfit">
+      <SEOHead
+        title="Orthotic Solutions India | Knee Braces & Spinal Supports | P&O ROBOTICS"
+        description="Custom orthotic solutions in India - knee braces, ankle foot orthosis (AFO), spinal orthosis, and supportive braces. Expert orthotic care for mobility and pain relief in Delhi."
+        keywords="knee braces India, AFO brace Delhi, spinal orthosis, orthotic supports, ankle foot orthosis India, back brace, orthotic solutions"
+        canonicalUrl="/solutions/orthotics"
+      />
       <PageLoader minDuration={500} />
       <Header />
 
