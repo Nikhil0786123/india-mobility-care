@@ -96,9 +96,9 @@ const PediatricSolutions = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="Pediatric Prosthetics India | Child Prosthetic Solutions | P&O ROBOTICS"
-        description="Specialized pediatric prosthetic solutions for children in India. Child-friendly, colorful, growth-adjustable prosthetics designed for active kids. Expert care in Delhi."
-        keywords="pediatric prosthetics India, child prosthetic leg, kids prosthetics Delhi, growth adjustable prosthetics, children artificial limbs"
+        title="Pediatric Prosthetic Leg & Hand Delhi | Child Artificial Limbs | P&O ROBOTICS"
+        description="Pediatric prosthetic leg and prosthetic hand solutions for children in Delhi, Begumpur. Child-friendly artificial limbs with growth-adjustable designs. Expert rehabilitation and care. Prosthetic clinic near me."
+        keywords="pediatric prosthetic leg, child prosthetic hand, artificial limbs for children, prosthetic clinic near me, rehabilitation Delhi, Begumpur pediatric prosthetics, children artificial limbs India"
         canonicalUrl="/solutions/pediatric"
       />
       <PageLoader minDuration={500} />

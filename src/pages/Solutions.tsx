@@ -155,9 +155,9 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="Prosthetic & Orthotic Solutions India | P&O ROBOTICS"
-        description="Explore our range of artificial limbs, prosthetic legs, orthotic braces, pediatric prosthetics, and diabetic foot care solutions. Custom-made for Indian patients."
-        keywords="prosthetic solutions India, orthotic braces Delhi, artificial limbs, prosthetic leg, knee braces, spinal orthosis, pediatric prosthetics, diabetic footcare"
+        title="Prosthetic Leg, Prosthetic Hand & Orthotic Solutions Delhi | P&O ROBOTICS"
+        description="Explore prosthetic leg, prosthetic hand, silicone prosthetic, orthotic braces, and rehabilitation solutions at P&O ROBOTICS Delhi. Custom artificial limbs for Indian patients. Prosthetic clinic near Begumpur."
+        keywords="prosthetic leg Delhi, prosthetic hand India, silicone prosthetic, artificial limbs, orthotic braces, rehabilitation prosthetics, prosthetic solutions India, prosthetic clinic near me"
         canonicalUrl="/solutions"
       />
       <PageLoader minDuration={500} />

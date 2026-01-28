@@ -120,9 +120,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="P&O ROBOTICS | Artificial Limbs & Prosthetic Solutions India"
-        description="P&O ROBOTICS provides advanced artificial limbs, prosthetic legs, and orthotic solutions in Delhi, India. Custom prosthetics for Indian patients. Book free consultation today."
-        keywords="artificial limbs India, prosthetic leg Delhi, prosthetic hand, artificial limbs in India, prosthetic solutions Delhi, rehabilitation prosthetics, below knee prosthesis, above knee prosthesis"
+        title="P&O ROBOTICS Artificial Limbs Solutions – Rebuilding Lives | Delhi"
+        description="P&O ROBOTICS is a leading prosthetic clinic in Delhi offering prosthetic leg, prosthetic hand, silicone prosthetic, and rehabilitation services. Located in Begumpur, we provide artificial limbs solutions for patients across India. Book free consultation today."
+        keywords="artificial limbs, prosthetic leg, prosthetic hand, silicone prosthetic, rehabilitation, artificial limbs in Delhi, prosthetic clinic near me, prosthetic solutions India, Begumpur prosthetics, Delhi rehabilitation"
         canonicalUrl="/"
       />
       <PageLoader minDuration={600} />
