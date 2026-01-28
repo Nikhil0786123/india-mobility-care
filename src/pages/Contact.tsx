@@ -79,9 +79,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="Contact P&O ROBOTICS | Book Free Prosthetics Consultation Delhi"
-        description="Contact P&O ROBOTICS for artificial limbs and prosthetic solutions in Delhi. Book free consultation at our Begumpur center. Call +91-97176-61811 or WhatsApp us."
-        keywords="contact P&O ROBOTICS, prosthetics consultation Delhi, artificial limbs Delhi, book appointment prosthetics, Begumpur prosthetic center"
+        title="Contact P&O ROBOTICS | Prosthetic Clinic Near Me Delhi Begumpur"
+        description="Contact P&O ROBOTICS for prosthetic leg, prosthetic hand, silicone prosthetic, and rehabilitation services in Delhi. Visit our Begumpur center or call +91-97176-61811. Free consultation available."
+        keywords="contact P&O ROBOTICS, prosthetic clinic near me, artificial limbs Delhi, prosthetic leg consultation, prosthetic hand fitting, Begumpur prosthetic center, rehabilitation Delhi"
         canonicalUrl="/contact"
       />
       <Header />

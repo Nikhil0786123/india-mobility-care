@@ -57,9 +57,9 @@ const DiabeticFootcare = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="Diabetic Foot Care India | Therapeutic Insoles & Footwear | P&O ROBOTICS"
-        description="Specialized diabetic foot care solutions in India - therapeutic insoles, custom diabetic footwear, and preventive care. Protect your feet with expert care in Delhi."
-        keywords="diabetic foot care India, therapeutic insoles Delhi, diabetic footwear, diabetic shoes India, foot ulcer prevention, custom insoles"
+        title="Diabetic Foot Care Delhi | Therapeutic Insoles & Footwear | P&O ROBOTICS"
+        description="Diabetic foot care solutions in Delhi, Begumpur – therapeutic insoles, custom diabetic footwear, and preventive care. Expert rehabilitation for diabetic patients. Prosthetic clinic near me."
+        keywords="diabetic foot care Delhi, therapeutic insoles, diabetic footwear, rehabilitation, artificial limbs in Delhi, prosthetic clinic near me, foot ulcer prevention, Begumpur diabetic care"
         canonicalUrl="/solutions/diabetic-footcare"
       />
       <PageLoader minDuration={500} />

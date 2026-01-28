@@ -163,9 +163,9 @@ const OrthoticSolutions = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="Orthotic Solutions India | Knee Braces & Spinal Supports | P&O ROBOTICS"
-        description="Custom orthotic solutions in India - knee braces, ankle foot orthosis (AFO), spinal orthosis, and supportive braces. Expert orthotic care for mobility and pain relief in Delhi."
-        keywords="knee braces India, AFO brace Delhi, spinal orthosis, orthotic supports, ankle foot orthosis India, back brace, orthotic solutions"
+        title="Orthotic Braces & Supports Delhi | Knee Brace, AFO, Spinal | P&O ROBOTICS"
+        description="Custom orthotic braces in Delhi – knee braces, ankle foot orthosis (AFO), spinal supports. Expert rehabilitation and orthotic care at Begumpur. Prosthetic clinic near me for orthotic solutions."
+        keywords="orthotic braces, knee braces Delhi, AFO brace, spinal orthosis, rehabilitation, artificial limbs in Delhi, prosthetic clinic near me, orthotic solutions India, Begumpur orthotics"
         canonicalUrl="/solutions/orthotics"
       />
       <PageLoader minDuration={500} />

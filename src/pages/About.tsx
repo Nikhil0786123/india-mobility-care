@@ -49,9 +49,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="About P&O ROBOTICS | Leading Prosthetics Provider in India"
-        description="Learn about P&O ROBOTICS Artificial Limbs Solutions - 15+ years of providing advanced prosthetic and orthotic care to patients across India. Trusted rehabilitation services in Delhi."
-        keywords="about P&O ROBOTICS, artificial limbs company India, prosthetics provider Delhi, orthotic solutions India, rehabilitation center"
+        title="About P&O ROBOTICS | Artificial Limbs & Rehabilitation Experts Delhi"
+        description="Learn about P&O ROBOTICS Artificial Limbs Solutions – 15+ years of providing prosthetic leg, prosthetic hand, silicone prosthetic, and rehabilitation care in Delhi, Begumpur. Trusted artificial limbs provider in India."
+        keywords="about P&O ROBOTICS, artificial limbs company Delhi, prosthetic leg provider India, prosthetic hand solutions, rehabilitation center Begumpur, silicone prosthetic experts"
         canonicalUrl="/about"
       />
       <Header />

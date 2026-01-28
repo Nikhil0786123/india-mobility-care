@@ -62,9 +62,9 @@ const Doctor = () => {
   return (
     <div className="min-h-screen bg-background font-outfit">
       <SEOHead
-        title="Dr. Abhinav Bhatnagar | Prosthetics Expert Delhi | P&O ROBOTICS"
-        description="Meet Dr. Abhinav Bhatnagar, a leading prosthetist and orthotist with 15+ years experience. Expert in artificial limbs, prosthetic leg fitting, and rehabilitation in Delhi, India."
-        keywords="Dr. Abhinav Bhatnagar, prosthetics expert Delhi, orthotist India, artificial limbs specialist, prosthetic fitting doctor, rehabilitation expert"
+        title="Dr. Abhinav Bhatnagar | Prosthetic Leg & Hand Expert Delhi | P&O ROBOTICS"
+        description="Meet Dr. Abhinav Bhatnagar – leading prosthetist at P&O ROBOTICS with 15+ years experience in prosthetic leg, prosthetic hand, silicone prosthetic fitting, and rehabilitation. Expert artificial limbs specialist in Delhi, Begumpur."
+        keywords="Dr. Abhinav Bhatnagar, prosthetic leg expert Delhi, prosthetic hand specialist, artificial limbs doctor, rehabilitation expert Begumpur, silicone prosthetic fitting, prosthetic clinic near me"
         canonicalUrl="/doctor"
       />
       <Header />
