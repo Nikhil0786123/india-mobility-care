@@ -1,5 +1,5 @@
 # P&O ROBOTICS ARTIFICIAL LIMBS SOLUTIONS
-# https://porobotics.in
+# https://roboticsals.in
 
 User-agent: Googlebot
 Allow: /
@@ -17,7 +17,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://porobotics.in/sitemap.xml
+Sitemap: https://roboticsals.in/sitemap.xml
 
 # Block unnecessary paths
 Disallow: /api/
